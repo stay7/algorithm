@@ -1,7 +1,7 @@
 """
 2020-02-19
 [leetcode](https://leetcode.com/problems/merge-two-sorted-lists/submissions/)
-21. Trapping Rain Water
+21. Merge Two Sorted Lists
 """
 
 
