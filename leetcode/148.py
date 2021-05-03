@@ -12,7 +12,7 @@ class ListNode:
         self.next = next
 
 
-# 제일 빠르면서 간단한 linked list -> python array
+# Merge sort 직접 구현
 # Runtime 544 ms (24.81%)
 # Memory 50.9 MB (6.40%)
 class Solution:
