@@ -7,7 +7,7 @@
 import collections
 
 
-#
+# 더 간단하게 하는 방법 -> 두 문자열을 정렬하고 비교하면 끝
 # Runtime 40 ms (87.18%)
 # Memory 14.4 MB (76.79%)
 class Solution:
