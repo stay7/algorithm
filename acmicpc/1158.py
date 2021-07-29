@@ -4,32 +4,25 @@
 """
 
 import sys
-
-
-class Node:
-    def __init__(self, val='0', next=None):
-        self.val = val
-        self.next = None
+import collections
 
 
 N, K = map(int, sys.stdin.readline().rstrip().split())
-head = cur = Node()
 out = []
-
+queue = collections.deque()
 for i in range(N):
-    cur.next = Node(str(i+1))
-    cur = cur.next
-cur.next = head.next
+    queue.append(str(i+1))
 
 
 step = 0
-prev, cur = cur, cur.next
-while len(out) < N:
+while queue:
     step += 1
+    num = queue.popleft()
     if step == K:
-        out.append(cur.val)
-        prev.next = cur.next
+        out.append(num)
         step = 0
-    prev, cur = cur, cur.next
+    else:
+        queue.append(num)
+
 
 sys.stdout.write('<{}>\n'.format(', '.join(out)))
