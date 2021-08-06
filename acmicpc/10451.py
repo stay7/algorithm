@@ -6,6 +6,13 @@
 import collections
 
 
+def dfs(start):
+    for node in graph[start]:
+        if node not in visit:
+            visit.add(node)
+            dfs(node)
+
+
 TC = int(input())
 for _ in range(TC):
     N = int(input())
@@ -19,13 +26,7 @@ for _ in range(TC):
 
     for i in range(1, N+1):
         if i not in visit:
-            stack = [i]
-            while stack:
-                cur = stack.pop()
-                visit.add(i)
-                for node in graph[cur]:
-                    if node not in visit:
-                        stack.append(node)
-                        visit.add(node)
+            visit.add(i)
+            dfs(i)
             count += 1
     print(count)
