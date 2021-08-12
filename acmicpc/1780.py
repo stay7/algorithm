@@ -4,35 +4,33 @@
 """
 
 
-def check(paper):
-    num = paper[0][0]
-    for i in range(len(paper)):
-        for j in range(len(paper)):
+def check(size, x, y):
+    num = paper[x][y]
+    for i in range(x, x+size):
+        for j in range(y, y+size):
             if num != paper[i][j]:
                 return False
     return True
 
 
-def divide(paper):
-    if len(paper) == 1:
-        counts[paper[0][0]] += 1
+def divide(size, x, y):
+    if size == 1:
+        counts[paper[x][y]] += 1
         return
-    if check(paper):
-        counts[paper[0][0]] += 1
+    if check(size, x, y):
+        counts[paper[x][y]] += 1
         return
 
-    for i in range(3):
-        paper1 = []
-        paper2 = []
-        paper3 = []
-        unit = len(paper)//3
-        for row in range(unit*i, unit*(i+1)):
-            paper1.append(paper[row][0:unit])
-            paper2.append(paper[row][unit:unit*2])
-            paper3.append(paper[row][unit*2:])
-        divide(paper1)
-        divide(paper2)
-        divide(paper3)
+    size //= 3
+    divide(size, x, y)
+    divide(size, x, y+size)
+    divide(size, x, y+size*2)
+    divide(size, x+size, y)
+    divide(size, x+size, y+size)
+    divide(size, x+size, y+size*2)
+    divide(size, x+size*2, y)
+    divide(size, x+size*2, y+size)
+    divide(size, x+size*2, y+size*2)
 
 
 N = int(input())
@@ -41,7 +39,7 @@ for _ in range(N):
     paper.append(list(map(int, input().split())))
 
 counts = [0, 0, 0]
-divide(paper)
+divide(len(paper), 0, 0)
 print(counts[-1])
 print(counts[0])
 print(counts[1])
