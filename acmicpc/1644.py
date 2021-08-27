@@ -3,10 +3,12 @@
 1644. 소수의 연속합
 """
 
-N = int(input())
-primes = [True for i in range(N+1)]
+import math
 
-for i in range(2, N+1):
+N = int(input())
+primes = [True]*(N+1)
+
+for i in range(2, math.isqrt(N)+1):
     if primes[i]:
         for j in range(i+i, N+1, i):
             primes[j] = False
