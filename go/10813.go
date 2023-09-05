@@ -18,14 +18,8 @@ func main() {
 	for i := 0; i < M; i++ {
 		var a, b int
 		fmt.Scanln(&a, &b)
-		swap(&buckets[a-1], &buckets[b-1])
+		buckets[a-1], buckets[b-1] = buckets[b-1], buckets[a-1]
 	}
 
 	fmt.Println(strings.Join(buckets, " "))
-}
-
-func swap(a *string, b *string) {
-	tmp := *b
-	*b = *a
-	*a = tmp
 }
