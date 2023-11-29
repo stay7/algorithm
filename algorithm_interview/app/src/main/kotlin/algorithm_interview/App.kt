@@ -4,5 +4,8 @@
 package algorithm_interview
 
 fun main() {
-
+    val numbers = mutableListOf(1, 2, 3)
+    numbers
+        .add(4)
+        .also { println("$it") }
 }

@@ -1,5 +1,6 @@
-package algorithm_interview
+package algorithm_interview.leetcode
 
+import algorithm_interview.leetcode.ReorderLogFiles
 import org.junit.Test
 import kotlin.test.assertContentEquals
 

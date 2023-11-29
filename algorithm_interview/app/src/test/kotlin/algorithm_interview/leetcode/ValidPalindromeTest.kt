@@ -1,7 +1,7 @@
-package algorithm_interview
+package algorithm_interview.leetcode
 
+import algorithm_interview.leetcode.ValidPalindrome
 import org.junit.Test
-import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 

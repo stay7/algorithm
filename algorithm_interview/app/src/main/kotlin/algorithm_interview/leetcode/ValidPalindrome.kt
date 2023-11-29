@@ -1,4 +1,4 @@
-package algorithm_interview
+package algorithm_interview.leetcode
 
 //https://leetcode.com/problems/valid-palindrome/description/
 class ValidPalindrome {

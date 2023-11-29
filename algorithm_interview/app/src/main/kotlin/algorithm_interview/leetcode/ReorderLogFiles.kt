@@ -1,4 +1,4 @@
-package algorithm_interview
+package algorithm_interview.leetcode
 
 // https://leetcode.com/problems/reorder-data-in-log-files/submissions/1102190225/ㄴ
 class ReorderLogFiles {

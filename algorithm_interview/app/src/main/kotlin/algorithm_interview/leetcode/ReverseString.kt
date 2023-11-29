@@ -1,4 +1,4 @@
-package algorithm_interview
+package algorithm_interview.leetcode
 
 class ReverseString {
     fun reverseString(s: CharArray): Unit {

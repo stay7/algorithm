@@ -1,4 +1,4 @@
-package algorithm_interview
+package algorithm_interview.leetcode
 
 class GroupAnagrams {
     // https://leetcode.com/problems/group-anagrams/submissions/1102789029/
